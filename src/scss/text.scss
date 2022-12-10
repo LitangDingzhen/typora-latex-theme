@@ -10,6 +10,28 @@ body {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  #write {
+    max-width: 1024px !important;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  #write {
+    max-width: 1200px !important;
+  }
+}
+@media screen {
+  #write {
+    /* padding: var(--set-margin); */
+    /* 添加一个淡蓝色的边框 */
+    /* border: 0.8px solid #AAC ; */
+    /* 页边阴影 */
+    box-shadow: 0 0 10px 4px #dddddd;
+    padding: 22px auto;
+    /* A4标准宽度 */
+    max-width: 21cm;
+  }
+}
 @media print {
   #write {
     padding: 0 !important;
@@ -22,8 +44,6 @@ body {
 #write {
   font-family: var(--base-Latin-font), var(--base-Chinese-font), serif;
   font-size: var(--base-font-size);
-  /* A4标准宽度 */
-  max-width: 21cm;
   @if $theme == "light" {
     background-color: white;
   } @else if $theme == "dark" {
@@ -37,6 +57,8 @@ body {
 
   p {
     text-align: left;
+    margin-block-start: var(--base-paragraph-margin);
+    margin-block-end: var(--base-paragraph-margin);
   }
 
   // 超链接

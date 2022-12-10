@@ -7,7 +7,7 @@
   h5,
   h6 {
     @if $os == "windows" {
-      font-weight: bold; 
+      font-weight: bold;
     } @else if $os == "macos" {
       font-weight: normal;
     }
@@ -114,31 +114,31 @@ h6.md-focus.md-heading:before {
 
 %h2-with-count {
   counter-increment: h2;
-  content: counter(h2);
-  margin-right: 2rem;
+  content: counter(h2, cjk-decimal) "、";
+  margin-right: 0.5rem;
 }
 
 %h3-with-count {
   counter-increment: h3;
   content: counter(h2) "." counter(h3);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 %h4-with-count {
   counter-increment: h4;
   content: counter(h2) "." counter(h3) "." counter(h4);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 %h5-with-count {
   counter-increment: h5;
   content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 %h6-with-count {
   counter-increment: h6;
   content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "."
     counter(h6);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }

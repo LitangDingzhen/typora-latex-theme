@@ -1,10 +1,7 @@
 #write {
   // 三线表
   table {
-    /* 三线表第一条线宽度 */
-    border-top: 1.2pt solid;
-    /* 三线表第二条线宽度 */
-    border-bottom: 1.2pt solid;
+    border: 1.2pt solid;
     font-family: var(--table-font), var(--base-Latin-font),
       var(--base-Chinese-font), serif;
     /* font-size: var(--base-font-size); */
@@ -15,9 +12,13 @@
     width: auto;
     /* 使表格默认居中；虽然这个代码不好，但好像没别的实现办法 */
     margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: center;
 
     td {
       padding: 2px;
+      border: 0.5pt solid;
     }
 
     tr {
@@ -27,12 +28,13 @@
 
   th {
     padding: 0px 6px;
+    border: 0.5pt solid;
   }
 
   thead {
     /* 表格标题（首行）样式 */
     /* 三线表表头的线 */
-    border-bottom: 0.5pt solid;
+    // border-bottom: 0.5pt solid;
     font-family: var(--table-title-font), var(--heading-Latin-font),
       var(--heading-Chinese-font), serif !important;
     /* font-size: var(--base-font-size); */
