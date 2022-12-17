@@ -6,8 +6,8 @@ $sub-sub-chapter-Chinese-font: null;
 :root {
   @if $os == "windows" {
     $ui-font: '"阿里巴巴普惠体 2.0"', '"微软雅黑"';
-    $heading-Chinese-font: "华文黑体";
-    $chapter-Chinese-font: "华文黑体";
+    $heading-Chinese-font: "黑体";
+    $chapter-Chinese-font: "黑体";
     $sub-chapter-Chinese-font: "华文楷体";
     $sub-sub-chapter-Chinese-font: "华文仿宋";
   } @else if $os == "macos" {

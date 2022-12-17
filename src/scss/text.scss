@@ -4,9 +4,11 @@ body {
   line-height: var(--base-line-height);
   /* counter-reset: tableHead 0 imgHead 0; */
   @if $theme == "dark" {
-    color: #dddddd;
+    color: #ffffff;
     background-color: #282828;
     // background:url(mermaidAPI.initialize({'fontFamily': '宋体-简, serif;'}););
+  } @else if $theme == "light" {
+    color: #000000;
   }
 }
 
@@ -22,22 +24,22 @@ body {
 }
 @media screen {
   #write {
-    /* padding: var(--set-margin); */
+    padding: var(--set-margin);
     /* 添加一个淡蓝色的边框 */
     /* border: 0.8px solid #AAC ; */
     /* 页边阴影 */
     box-shadow: 0 0 10px 4px #dddddd;
-    padding: 22px auto;
+    margin: var(--set-margin);
+    margin-left: auto;
+    margin-right: auto;
     /* A4标准宽度 */
     max-width: 21cm;
   }
 }
+
 @media print {
   #write {
-    padding: 0 !important;
-  }
-  @page {
-    margin: var(--set-margin) !important; /* 页边距 */
+      padding: var(--set-margin) !important;
   }
 }
 
@@ -88,4 +90,13 @@ img {
 
 strong {
   font-weight: var(--strong-weight);
+}
+
+.MathJax {
+  font-family: var(--base-Latin-font), var(--base-Chinese-font), serif;
+  font-size: calc(var(--base-font-size) * 1.1);
+}
+
+.md-inline-math {
+  text-indent: 0;
 }

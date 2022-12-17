@@ -8,7 +8,7 @@ ul {
     /*left: -0.8rem;*/
     ul {
       /* 无序列表第三极：小圈 */
-      list-style: "◦";
+      list-style: circle;
     }
   }
 }
@@ -55,16 +55,16 @@ li {
   // padding-left: 0.5em;
 }
 
-ol,
-ul {
-  /* 其他级列表缩进 */
-  padding-inline-start: 0;
-  /* 块间距 */
-  margin-block-start: var(--base-paragraph-margin);
-  margin-block-end: var(--base-paragraph-margin);
-}
-
 #write {
+  ol,
+  ul {
+    /* 其他级列表缩进 */
+    padding-inline-start: 0em;
+    /* 块间距 */
+    margin-block-start: var(--base-paragraph-margin);
+    margin-block-end: var(--base-paragraph-margin);
+  }
+
   & > ul,
   & > ol {
     /* 一级列表缩进 */
